@@ -1,0 +1,1592 @@
+2024-06-03 23:26:14,646 p=4850 u=ec2-user n=ansible | 172.31.39.19 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "append": false,
+    "changed": false,
+    "comment": "serge",
+    "group": 1002,
+    "home": "/home/john",
+    "move_home": false,
+    "name": "john",
+    "shell": "/bin/bash",
+    "state": "present",
+    "uid": 1002
+}
+2024-06-03 23:37:44,034 p=5220 u=ec2-user n=ansible | 172.31.39.19 | CHANGED | rc=0 >>
+ 23:37:43 up 50 min,  2 users,  load average: 0.00, 0.00, 0.00
+
+2024-06-03 23:37:44,089 p=5220 u=ec2-user n=ansible | 172.31.29.226 | CHANGED | rc=0 >>
+ 23:37:44 up 51 min,  2 users,  load average: 0.00, 0.00, 0.00
+
+2024-06-04 00:07:04,902 p=5588 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 00:07:04,932 p=5588 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 00:07:07,550 p=5588 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 00:07:09,085 p=5588 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 00:07:09,111 p=5588 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 00:07:12,808 p=5588 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"changed": false, "msg": "No package matching 'nginx' found available, installed or updated", "rc": 126, "results": ["No package matching 'nginx' found available, installed or updated"]}
+2024-06-04 00:07:17,557 p=5588 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 00:07:17,571 p=5588 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 00:07:18,392 p=5588 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 00:07:18,402 p=5588 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 00:07:18,911 p=5588 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 00:07:18,921 p=5588 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 00:07:19,422 p=5588 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 00:07:19,433 p=5588 u=ec2-user n=ansible | TASK [Create directory] ****************************************************************
+2024-06-04 00:07:19,941 p=5588 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 00:07:19,966 p=5588 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 00:07:19,966 p=5588 u=ec2-user n=ansible | 172.31.29.226              : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-04 00:07:19,966 p=5588 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 00:52:48,327 p=5961 u=ec2-user n=ansible | 172.31.39.19 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "172.31.39.19"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::c7a:1bff:fe57:d125"
+        ],
+        "ansible_apparmor": {
+            "status": "disabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "10/16/2017",
+        "ansible_bios_vendor": "Amazon EC2",
+        "ansible_bios_version": "1.0",
+        "ansible_board_asset_tag": "i-0e6163b7ede707059",
+        "ansible_board_name": "NA",
+        "ansible_board_serial": "NA",
+        "ansible_board_vendor": "Amazon EC2",
+        "ansible_board_version": "NA",
+        "ansible_chassis_asset_tag": "Amazon EC2",
+        "ansible_chassis_serial": "NA",
+        "ansible_chassis_vendor": "Amazon EC2",
+        "ansible_chassis_version": "NA",
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-4.14.343-261.564.amzn2.x86_64",
+            "biosdevname": "0",
+            "console": "ttyS0,115200n8",
+            "net.ifnames": "0",
+            "nvme_core.io_timeout": "4294967295",
+            "rd.emergency": "poweroff",
+            "rd.shell": "0",
+            "ro": true,
+            "root": "UUID=e1c8828e-1de8-4a09-abb1-a211a3d69be0"
+        },
+        "ansible_date_time": {
+            "date": "2024-06-04",
+            "day": "04",
+            "epoch": "1717462367",
+            "epoch_int": "1717462367",
+            "hour": "00",
+            "iso8601": "2024-06-04T00:52:47Z",
+            "iso8601_basic": "20240604T005247952908",
+            "iso8601_basic_short": "20240604T005247",
+            "iso8601_micro": "2024-06-04T00:52:47.952908Z",
+            "minute": "52",
+            "month": "06",
+            "second": "47",
+            "time": "00:52:47",
+            "tz": "UTC",
+            "tz_dst": "UTC",
+            "tz_offset": "+0000",
+            "weekday": "Tuesday",
+            "weekday_number": "2",
+            "weeknumber": "23",
+            "year": "2024"
+        },
+        "ansible_default_ipv4": {
+            "address": "172.31.39.19",
+            "alias": "eth0",
+            "broadcast": "172.31.47.255",
+            "gateway": "172.31.32.1",
+            "interface": "eth0",
+            "macaddress": "0e:7a:1b:57:d1:25",
+            "mtu": 9001,
+            "netmask": "255.255.240.0",
+            "network": "172.31.32.0",
+            "prefix": "20",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {},
+        "ansible_device_links": {
+            "ids": {
+                "nvme0n1": [
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11",
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-ns-1",
+                    "nvme-nvme.1d0f-766f6c3065386135396538663437373139653131-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001"
+                ],
+                "nvme0n1p1": [
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-ns-1-part1",
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-part1",
+                    "nvme-nvme.1d0f-766f6c3065386135396538663437373139653131-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part1"
+                ],
+                "nvme0n1p128": [
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-ns-1-part128",
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-part128",
+                    "nvme-nvme.1d0f-766f6c3065386135396538663437373139653131-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part128"
+                ]
+            },
+            "labels": {
+                "nvme0n1p1": [
+                    "\\x2f"
+                ]
+            },
+            "masters": {},
+            "uuids": {
+                "nvme0n1p1": [
+                    "e1c8828e-1de8-4a09-abb1-a211a3d69be0"
+                ]
+            }
+        },
+        "ansible_devices": {
+            "nvme0n1": {
+                "holders": [],
+                "host": "Non-Volatile memory controller: Amazon.com, Inc. Device 8061",
+                "links": {
+                    "ids": [
+                        "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11",
+                        "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-ns-1",
+                        "nvme-nvme.1d0f-766f6c3065386135396538663437373139653131-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "Amazon Elastic Block Store",
+                "partitions": {
+                    "nvme0n1p1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-ns-1-part1",
+                                "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-part1",
+                                "nvme-nvme.1d0f-766f6c3065386135396538663437373139653131-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part1"
+                            ],
+                            "labels": [
+                                "\\x2f"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "e1c8828e-1de8-4a09-abb1-a211a3d69be0"
+                            ]
+                        },
+                        "sectors": "16773087",
+                        "sectorsize": 512,
+                        "size": "8.00 GB",
+                        "start": "4096",
+                        "uuid": "e1c8828e-1de8-4a09-abb1-a211a3d69be0"
+                    },
+                    "nvme0n1p128": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-ns-1-part128",
+                                "nvme-Amazon_Elastic_Block_Store_vol0e8a59e8f47719e11-part128",
+                                "nvme-nvme.1d0f-766f6c3065386135396538663437373139653131-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part128"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": []
+                        },
+                        "sectors": "2048",
+                        "sectorsize": 512,
+                        "size": "1.00 MB",
+                        "start": "2048",
+                        "uuid": null
+                    }
+                },
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "16777216",
+                "sectorsize": "512",
+                "serial": "vol0e8a59e8f47719e11",
+                "size": "8.00 GB",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            }
+        },
+        "ansible_distribution": "Amazon",
+        "ansible_distribution_file_parsed": true,
+        "ansible_distribution_file_path": "/etc/os-release",
+        "ansible_distribution_file_variety": "Amazon",
+        "ansible_distribution_major_version": "2",
+        "ansible_distribution_minor_version": "NA",
+        "ansible_distribution_release": "NA",
+        "ansible_distribution_version": "2",
+        "ansible_dns": {
+            "nameservers": [
+                "172.31.0.2"
+            ],
+            "options": {
+                "attempts": "5",
+                "timeout": "2"
+            },
+            "search": [
+                "ec2.internal"
+            ]
+        },
+        "ansible_domain": "ec2.internal",
+        "ansible_effective_group_id": 1000,
+        "ansible_effective_user_id": 1000,
+        "ansible_env": {
+            "HOME": "/home/ec2-user",
+            "LANG": "en_US.UTF-8",
+            "LESSOPEN": "||/usr/bin/lesspipe.sh %s",
+            "LOGNAME": "ec2-user",
+            "LS_COLORS": "rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:",
+            "MAIL": "/var/mail/ec2-user",
+            "PATH": "/usr/local/bin:/usr/bin",
+            "PWD": "/home/ec2-user",
+            "SHELL": "/bin/bash",
+            "SHLVL": "2",
+            "SSH_CLIENT": "172.31.33.242 55562 22",
+            "SSH_CONNECTION": "172.31.33.242 55562 172.31.39.19 22",
+            "SSH_TTY": "/dev/pts/1",
+            "TERM": "xterm-256color",
+            "USER": "ec2-user",
+            "XDG_RUNTIME_DIR": "/run/user/1000",
+            "XDG_SESSION_ID": "25",
+            "_": "/usr/bin/python3.7"
+        },
+        "ansible_eth0": {
+            "active": true,
+            "device": "eth0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "on",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "off [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "off",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "on",
+                "tx_checksum_ipv6": "on",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [fixed]",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off [fixed]",
+                "tx_tcp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "172.31.39.19",
+                "broadcast": "172.31.47.255",
+                "netmask": "255.255.240.0",
+                "network": "172.31.32.0",
+                "prefix": "20"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::c7a:1bff:fe57:d125",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "0e:7a:1b:57:d1:25",
+            "module": "ena",
+            "mtu": 9001,
+            "pciid": "0000:00:05.0",
+            "promisc": false,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "ansible_fibre_channel_wwn": [],
+        "ansible_fips": false,
+        "ansible_form_factor": "Other",
+        "ansible_fqdn": "ip-172-31-39-19.ec2.internal",
+        "ansible_hostname": "ip-172-31-39-19",
+        "ansible_hostnqn": "",
+        "ansible_interfaces": [
+            "lo",
+            "eth0"
+        ],
+        "ansible_is_chroot": true,
+        "ansible_iscsi_iqn": "",
+        "ansible_kernel": "4.14.343-261.564.amzn2.x86_64",
+        "ansible_kernel_version": "#1 SMP Tue May 7 02:23:34 UTC 2024",
+        "ansible_lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0",
+                "prefix": "8"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "loopback"
+        },
+        "ansible_local": {},
+        "ansible_lsb": {},
+        "ansible_machine": "x86_64",
+        "ansible_machine_id": "ec216995e2000e1f6dfb7fd85985584a",
+        "ansible_memfree_mb": 346,
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 827,
+                "used": 117
+            },
+            "real": {
+                "free": 346,
+                "total": 944,
+                "used": 598
+            },
+            "swap": {
+                "cached": 0,
+                "free": 0,
+                "total": 0,
+                "used": 0
+            }
+        },
+        "ansible_memtotal_mb": 944,
+        "ansible_mounts": [
+            {
+                "block_available": 1673016,
+                "block_size": 4096,
+                "block_total": 2094075,
+                "block_used": 421059,
+                "device": "/dev/nvme0n1p1",
+                "fstype": "xfs",
+                "inode_available": 4144368,
+                "inode_total": 4193216,
+                "inode_used": 48848,
+                "mount": "/",
+                "options": "rw,noatime,attr2,inode64,noquota",
+                "size_available": 6852673536,
+                "size_total": 8577331200,
+                "uuid": "e1c8828e-1de8-4a09-abb1-a211a3d69be0"
+            }
+        ],
+        "ansible_nodename": "ip-172-31-39-19.ec2.internal",
+        "ansible_os_family": "RedHat",
+        "ansible_pkg_mgr": "yum",
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-4.14.343-261.564.amzn2.x86_64",
+            "biosdevname": "0",
+            "console": [
+                "tty0",
+                "ttyS0,115200n8"
+            ],
+            "net.ifnames": "0",
+            "nvme_core.io_timeout": "4294967295",
+            "rd.emergency": "poweroff",
+            "rd.shell": "0",
+            "ro": true,
+            "root": "UUID=e1c8828e-1de8-4a09-abb1-a211a3d69be0"
+        },
+        "ansible_processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz",
+            "1",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz"
+        ],
+        "ansible_processor_cores": 1,
+        "ansible_processor_count": 1,
+        "ansible_processor_nproc": 2,
+        "ansible_processor_threads_per_core": 2,
+        "ansible_processor_vcpus": 2,
+        "ansible_product_name": "t3.micro",
+        "ansible_product_serial": "NA",
+        "ansible_product_uuid": "NA",
+        "ansible_product_version": "NA",
+        "ansible_python": {
+            "executable": "/usr/bin/python3.7",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 16,
+                "minor": 7,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                7,
+                16,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "3.7.16",
+        "ansible_real_group_id": 1000,
+        "ansible_real_user_id": 1000,
+        "ansible_selinux": {
+            "status": "disabled"
+        },
+        "ansible_selinux_python_present": true,
+        "ansible_service_mgr": "systemd",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBG6Mg8fuVhspV5DC08DAqvahkAlF0H1kDt3hvhD2wuX795z/dDFYo3Y9eh9O0R9FyqXYxiRGpaf89e8CJ1HQoX4=",
+        "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIPuM0+UvRXr7BtDTAWcPViZdzK6393JU+yBWFiWIAD30",
+        "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCX4nmErEiz+IN8pewlhQ2ft7LwPY+LWkRvF7faYDNuQUYBoGLlR2VtD+3flMW1LIOLhrfbOwiuApmLXf0j70aTJZKXH46c3qwLzO8UgOkhvCkEKN6pASKsW0bTz3hqo72DizGVi2kaxAZFyEuMrWIB+FstaZldD8e1f4PtTpubRy6I5QTpXZRbCrPXwLp2t7/i3x/fL++KIDaQwEtscKQdyzfLl5l9U/QLss0q7bf0YaHYspuddiZ/wDIzf6FZ/sj0byPN7UBJLxvcBAJak0W8CjF82tG5jIZl3rA6tmri9vCg0QBRZyZK1bWtwT1MtbHtBWMbn8gNTv/z80439uyJ",
+        "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "ansible_swapfree_mb": 0,
+        "ansible_swaptotal_mb": 0,
+        "ansible_system": "Linux",
+        "ansible_system_capabilities": [
+            ""
+        ],
+        "ansible_system_capabilities_enforced": "True",
+        "ansible_system_vendor": "Amazon EC2",
+        "ansible_uptime_seconds": 7549,
+        "ansible_user_dir": "/home/ec2-user",
+        "ansible_user_gecos": "EC2 Default User",
+        "ansible_user_gid": 1000,
+        "ansible_user_id": "ec2-user",
+        "ansible_user_shell": "/bin/bash",
+        "ansible_user_uid": 1000,
+        "ansible_userspace_architecture": "x86_64",
+        "ansible_userspace_bits": "64",
+        "ansible_virtualization_role": "guest",
+        "ansible_virtualization_tech_guest": [
+            "kvm"
+        ],
+        "ansible_virtualization_tech_host": [],
+        "ansible_virtualization_type": "kvm",
+        "discovered_interpreter_python": "/usr/bin/python3.7",
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2024-06-04 00:57:45,819 p=6016 u=ec2-user n=ansible | 172.31.29.226 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "172.31.29.226"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fe80::8ff:d8ff:fedc:39f7"
+        ],
+        "ansible_apparmor": {
+            "status": "enabled"
+        },
+        "ansible_architecture": "aarch64",
+        "ansible_bios_date": "11/1/2018",
+        "ansible_bios_vendor": "Amazon EC2",
+        "ansible_bios_version": "1.0",
+        "ansible_board_asset_tag": "i-01fcdcfd777a8bf89",
+        "ansible_board_name": "NA",
+        "ansible_board_serial": "NA",
+        "ansible_board_vendor": "Amazon EC2",
+        "ansible_board_version": "NA",
+        "ansible_chassis_asset_tag": "Amazon EC2",
+        "ansible_chassis_serial": "NA",
+        "ansible_chassis_vendor": "Amazon EC2",
+        "ansible_chassis_version": "NA",
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-5.4.0-1103-aws",
+            "console": "ttyS0",
+            "nvme_core.io_timeout": "4294967295",
+            "ro": true,
+            "root": "LABEL=cloudimg-rootfs"
+        },
+        "ansible_date_time": {
+            "date": "2024-06-04",
+            "day": "04",
+            "epoch": "1717462665",
+            "epoch_int": "1717462665",
+            "hour": "00",
+            "iso8601": "2024-06-04T00:57:45Z",
+            "iso8601_basic": "20240604T005745332730",
+            "iso8601_basic_short": "20240604T005745",
+            "iso8601_micro": "2024-06-04T00:57:45.332730Z",
+            "minute": "57",
+            "month": "06",
+            "second": "45",
+            "time": "00:57:45",
+            "tz": "UTC",
+            "tz_dst": "UTC",
+            "tz_offset": "+0000",
+            "weekday": "Tuesday",
+            "weekday_number": "2",
+            "weeknumber": "23",
+            "year": "2024"
+        },
+        "ansible_default_ipv4": {
+            "address": "172.31.29.226",
+            "alias": "ens5",
+            "broadcast": "172.31.31.255",
+            "gateway": "172.31.16.1",
+            "interface": "ens5",
+            "macaddress": "0a:ff:d8:dc:39:f7",
+            "mtu": 9001,
+            "netmask": "255.255.240.0",
+            "network": "172.31.16.0",
+            "prefix": "20",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {},
+        "ansible_device_links": {
+            "ids": {
+                "nvme0n1": [
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8d2115e15f014e0",
+                    "nvme-nvme.1d0f-766f6c3065386432313135653135663031346530-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001"
+                ],
+                "nvme0n1p1": [
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8d2115e15f014e0-part1",
+                    "nvme-nvme.1d0f-766f6c3065386432313135653135663031346530-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part1"
+                ],
+                "nvme0n1p15": [
+                    "nvme-Amazon_Elastic_Block_Store_vol0e8d2115e15f014e0-part15",
+                    "nvme-nvme.1d0f-766f6c3065386432313135653135663031346530-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part15"
+                ]
+            },
+            "labels": {
+                "nvme0n1p1": [
+                    "cloudimg-rootfs"
+                ],
+                "nvme0n1p15": [
+                    "UEFI"
+                ]
+            },
+            "masters": {},
+            "uuids": {
+                "nvme0n1p1": [
+                    "844c68d0-ffcf-416f-9b91-9f9dc5841a6c"
+                ],
+                "nvme0n1p15": [
+                    "F832-A81A"
+                ]
+            }
+        },
+        "ansible_devices": {
+            "loop0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "100592",
+                "sectorsize": "512",
+                "size": "49.12 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "95000",
+                "sectorsize": "512",
+                "size": "46.39 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "100544",
+                "sectorsize": "512",
+                "size": "49.09 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop3": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "69032",
+                "sectorsize": "512",
+                "size": "33.71 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop4": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "44312",
+                "sectorsize": "512",
+                "size": "21.64 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop5": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop6": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop7": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "nvme0n1": {
+                "holders": [],
+                "host": "Non-Volatile memory controller: Amazon.com, Inc. Device 8061",
+                "links": {
+                    "ids": [
+                        "nvme-Amazon_Elastic_Block_Store_vol0e8d2115e15f014e0",
+                        "nvme-nvme.1d0f-766f6c3065386432313135653135663031346530-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "Amazon Elastic Block Store",
+                "partitions": {
+                    "nvme0n1p1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "nvme-Amazon_Elastic_Block_Store_vol0e8d2115e15f014e0-part1",
+                                "nvme-nvme.1d0f-766f6c3065386432313135653135663031346530-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part1"
+                            ],
+                            "labels": [
+                                "cloudimg-rootfs"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "844c68d0-ffcf-416f-9b91-9f9dc5841a6c"
+                            ]
+                        },
+                        "sectors": "16570335",
+                        "sectorsize": 512,
+                        "size": "7.90 GB",
+                        "start": "206848",
+                        "uuid": "844c68d0-ffcf-416f-9b91-9f9dc5841a6c"
+                    },
+                    "nvme0n1p15": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "nvme-Amazon_Elastic_Block_Store_vol0e8d2115e15f014e0-part15",
+                                "nvme-nvme.1d0f-766f6c3065386432313135653135663031346530-416d617a6f6e20456c617374696320426c6f636b2053746f7265-00000001-part15"
+                            ],
+                            "labels": [
+                                "UEFI"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "F832-A81A"
+                            ]
+                        },
+                        "sectors": "202753",
+                        "sectorsize": 512,
+                        "size": "99.00 MB",
+                        "start": "2048",
+                        "uuid": "F832-A81A"
+                    }
+                },
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "16777216",
+                "sectorsize": "512",
+                "serial": "vol0e8d2115e15f014e0",
+                "size": "8.00 GB",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            }
+        },
+        "ansible_distribution": "Ubuntu",
+        "ansible_distribution_file_parsed": true,
+        "ansible_distribution_file_path": "/etc/os-release",
+        "ansible_distribution_file_variety": "Debian",
+        "ansible_distribution_major_version": "18",
+        "ansible_distribution_release": "bionic",
+        "ansible_distribution_version": "18.04",
+        "ansible_dns": {
+            "nameservers": [
+                "127.0.0.53"
+            ],
+            "options": {
+                "edns0": true
+            },
+            "search": [
+                "ec2.internal"
+            ]
+        },
+        "ansible_domain": "ec2.internal",
+        "ansible_effective_group_id": 1000,
+        "ansible_effective_user_id": 1000,
+        "ansible_ens5": {
+            "active": true,
+            "device": "ens5",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "on",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "off [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "off",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "on",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [fixed]",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off [fixed]",
+                "tx_tcp_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "172.31.29.226",
+                "broadcast": "172.31.31.255",
+                "netmask": "255.255.240.0",
+                "network": "172.31.16.0",
+                "prefix": "20"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::8ff:d8ff:fedc:39f7",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "0a:ff:d8:dc:39:f7",
+            "module": "ena",
+            "mtu": 9001,
+            "pciid": "0000:00:05.0",
+            "promisc": false,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "ansible_env": {
+            "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+            "HOME": "/home/ubuntu",
+            "LANG": "C.UTF-8",
+            "LOGNAME": "ubuntu",
+            "MAIL": "/var/mail/ubuntu",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+            "PWD": "/home/ubuntu",
+            "SHELL": "/bin/bash",
+            "SHLVL": "1",
+            "SSH_CLIENT": "172.31.33.242 33070 22",
+            "SSH_CONNECTION": "172.31.33.242 33070 172.31.29.226 22",
+            "SSH_TTY": "/dev/pts/1",
+            "TERM": "xterm-256color",
+            "USER": "ubuntu",
+            "XDG_RUNTIME_DIR": "/run/user/1000",
+            "XDG_SESSION_ID": "13",
+            "_": "/bin/sh"
+        },
+        "ansible_fibre_channel_wwn": [],
+        "ansible_fips": false,
+        "ansible_form_factor": "Other",
+        "ansible_fqdn": "ip-172-31-29-226.ec2.internal",
+        "ansible_hostname": "ip-172-31-29-226",
+        "ansible_hostnqn": "",
+        "ansible_interfaces": [
+            "ens5",
+            "lo"
+        ],
+        "ansible_is_chroot": false,
+        "ansible_iscsi_iqn": "",
+        "ansible_kernel": "5.4.0-1103-aws",
+        "ansible_kernel_version": "#111~18.04.1-Ubuntu SMP Tue May 23 20:04:31 UTC 2023",
+        "ansible_lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "udp_fragmentation_offload": "off",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0",
+                "prefix": "8"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "loopback"
+        },
+        "ansible_local": {},
+        "ansible_lsb": {
+            "codename": "bionic",
+            "description": "Ubuntu 18.04.6 LTS",
+            "id": "Ubuntu",
+            "major_release": "18",
+            "release": "18.04"
+        },
+        "ansible_machine": "aarch64",
+        "ansible_machine_id": "1dee7478a630411f90f79b6242cf5b6b",
+        "ansible_memfree_mb": 138,
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 574,
+                "used": 356
+            },
+            "real": {
+                "free": 138,
+                "total": 930,
+                "used": 792
+            },
+            "swap": {
+                "cached": 0,
+                "free": 0,
+                "total": 0,
+                "used": 0
+            }
+        },
+        "ansible_memtotal_mb": 930,
+        "ansible_mounts": [
+            {
+                "block_available": 1517607,
+                "block_size": 4096,
+                "block_total": 1987634,
+                "block_used": 470027,
+                "device": "/dev/nvme0n1p1",
+                "fstype": "ext4",
+                "inode_available": 965829,
+                "inode_total": 1037312,
+                "inode_used": 71483,
+                "mount": "/",
+                "options": "rw,relatime,discard",
+                "size_available": 6216118272,
+                "size_total": 8141348864,
+                "uuid": "844c68d0-ffcf-416f-9b91-9f9dc5841a6c"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 372,
+                "block_used": 372,
+                "device": "/dev/loop1",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 655,
+                "inode_used": 655,
+                "mount": "/snap/snapd/19127",
+                "options": "ro,nodev,relatime",
+                "size_available": 0,
+                "size_total": 48758784,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 393,
+                "block_used": 393,
+                "device": "/dev/loop2",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 10900,
+                "inode_used": 10900,
+                "mount": "/snap/core18/2755",
+                "options": "ro,nodev,relatime",
+                "size_available": 0,
+                "size_total": 51511296,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 393,
+                "block_used": 393,
+                "device": "/dev/loop0",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 10939,
+                "inode_used": 10939,
+                "mount": "/snap/core18/2826",
+                "options": "ro,nodev,relatime",
+                "size_available": 0,
+                "size_total": 51511296,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 270,
+                "block_used": 270,
+                "device": "/dev/loop3",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 648,
+                "inode_used": 648,
+                "mount": "/snap/snapd/21761",
+                "options": "ro,nodev,relatime",
+                "size_available": 0,
+                "size_total": 35389440,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 174,
+                "block_used": 174,
+                "device": "/dev/loop4",
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 16,
+                "inode_used": 16,
+                "mount": "/snap/amazon-ssm-agent/6562",
+                "options": "ro,nodev,relatime",
+                "size_available": 0,
+                "size_total": 22806528,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 188499,
+                "block_size": 512,
+                "block_total": 199601,
+                "block_used": 11102,
+                "device": "/dev/nvme0n1p15",
+                "fstype": "vfat",
+                "inode_available": 0,
+                "inode_total": 0,
+                "inode_used": 0,
+                "mount": "/boot/efi",
+                "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro",
+                "size_available": 96511488,
+                "size_total": 102195712,
+                "uuid": "F832-A81A"
+            }
+        ],
+        "ansible_nodename": "ip-172-31-29-226",
+        "ansible_os_family": "Debian",
+        "ansible_pkg_mgr": "apt",
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-5.4.0-1103-aws",
+            "console": "ttyS0",
+            "nvme_core.io_timeout": "4294967295",
+            "ro": true,
+            "root": "LABEL=cloudimg-rootfs"
+        },
+        "ansible_processor": [
+            "0",
+            "1"
+        ],
+        "ansible_processor_cores": 1,
+        "ansible_processor_count": 2,
+        "ansible_processor_nproc": 2,
+        "ansible_processor_threads_per_core": 1,
+        "ansible_processor_vcpus": 2,
+        "ansible_product_name": "t4g.micro",
+        "ansible_product_serial": "NA",
+        "ansible_product_uuid": "NA",
+        "ansible_product_version": "NA",
+        "ansible_python": {
+            "executable": "/usr/bin/python3",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 9,
+                "minor": 6,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                6,
+                9,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "3.6.9",
+        "ansible_real_group_id": 1000,
+        "ansible_real_user_id": 1000,
+        "ansible_selinux": {
+            "status": "disabled"
+        },
+        "ansible_selinux_python_present": true,
+        "ansible_service_mgr": "systemd",
+        "ansible_ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBANFFXdIqSBOBwxqZ+evbSRebQiFnwNPaFeAZhc8tpiJYssyMBCv8vvsgXLSXUEwnKn6ouybAQBorGz6rBgGARkXv/iXzY+3z8CY4avqWqBMzZkxEfuybbpDvsBpv5SQAcTMEzTPBwdmBwfkTz4d7tXaGrIIXDCbkkElUy3DBjRK9AAAAFQCWe4/xuaHGbGpnqFgdXoapufU61wAAAIBCFEYo/47zTdRYDxrd678BGr42YCc5ycBP9431a9m1X/KNIGlfwAQ4D6v+2VOu7JMHVQUqCf1lk6PKskPpzytsxEHPm6eTQfrBiYq6WQwss6gR6SVMidR2JoRabWpzDBQRvISTajzDmc0RsRAT6yYtheurx+Y+b31Qjsx14r2TrwAAAIBFPADAVR7xI9J/YMavAPJ5IlMMPPSPTGTxNdVFvX92VW3ldKqbxXDnxjwoFZnfRZEVSFUb+3vu61Ab5lrXhkfuBOzZCQqBYG7BEOH73MQOJpjado9tfPKewsSAIU7UqHOxB7urQyQCr/P4oCZtzy/+Guc7qYynLgr3Wb4chSwTUw==",
+        "ansible_ssh_host_key_dsa_public_keytype": "ssh-dss",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHbDCqhKH4wbeyQTmApeRMn5kc3nT5lAaEFmLIQVpLpoI9k4LwejoX1EFG9YvX9niL/MnSx60n/4jmYRKx0fm1w=",
+        "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIIJK6d4ypXhoIY/inauowsT89BOSDeEAWGkkwkvZiX3+",
+        "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCmln2pqeJscwcTyDJW8ChI9UktydMMrVAIQjKAXst3V52rM60WL8hhLFb9gtt1GkuDue/UXzt0Oc+ysVx1AcjT+xQCGFY34cTCl01X+VOcZi7GHFqNOg5GKIwZ0mXzcnOaYo/wePFCMC1Co24jZgt5Kryt/N5gPb/j1nkeRqUC7e+LwrwNVqzL8fDWy+Vz561vpDZFHaJaxMJBFkUGrQSfG52bHWlkcPSeW0GjnJW+P55Uy/k2m30fJXf9QEOkm9ESe2gojtVaQzf93BAWWyOqV1xuliHvd4SebNdRhy/F2AW11knn0jzljtAK8ELtwwMy3Rl7JaDuLz6udqA1GAY/",
+        "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "ansible_swapfree_mb": 0,
+        "ansible_swaptotal_mb": 0,
+        "ansible_system": "Linux",
+        "ansible_system_capabilities": [
+            ""
+        ],
+        "ansible_system_capabilities_enforced": "True",
+        "ansible_system_vendor": "Amazon EC2",
+        "ansible_uptime_seconds": 7861,
+        "ansible_user_dir": "/home/ubuntu",
+        "ansible_user_gecos": "Ubuntu",
+        "ansible_user_gid": 1000,
+        "ansible_user_id": "ubuntu",
+        "ansible_user_shell": "/bin/bash",
+        "ansible_user_uid": 1000,
+        "ansible_userspace_bits": "64",
+        "ansible_virtualization_role": "guest",
+        "ansible_virtualization_tech_guest": [
+            "kvm"
+        ],
+        "ansible_virtualization_tech_host": [],
+        "ansible_virtualization_type": "kvm",
+        "discovered_interpreter_python": "/usr/bin/python3",
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2024-06-04 01:01:56,536 p=6149 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:01:56,552 p=6149 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:01:59,541 p=6149 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:02:00,369 p=6149 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3.7"}, "changed": false, "msg": "No package matching 'nginx' found available, installed or updated", "rc": 126, "results": ["No package matching 'nginx' found available, installed or updated"]}
+2024-06-04 01:02:00,379 p=6149 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 01:02:00,963 p=6149 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:02:00,969 p=6149 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 01:02:01,708 p=6149 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:02:01,734 p=6149 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 01:02:02,559 p=6149 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 01:02:02,570 p=6149 u=ec2-user n=ansible | TASK [Create directory] ****************************************************************
+2024-06-04 01:02:03,215 p=6149 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"changed": true, "cmd": "mkdir /tmp/os", "delta": "0:00:00.003820", "end": "2024-06-04 01:02:03.129842", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:02:03.126022", "stderr": "mkdir: cannot create directory ‘/tmp/os’: File exists", "stderr_lines": ["mkdir: cannot create directory ‘/tmp/os’: File exists"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:02:03,221 p=6149 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:02:03,221 p=6149 u=ec2-user n=ansible | 172.31.29.226              : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:02:03,221 p=6149 u=ec2-user n=ansible | 172.31.39.19               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:05:44,628 p=6286 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:05:44,647 p=6286 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:05:46,599 p=6286 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:05:46,717 p=6286 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:05:46,758 p=6286 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:05:46,802 p=6286 u=ec2-user n=ansible | skipping: [172.31.39.19]
+2024-06-04 01:05:46,812 p=6286 u=ec2-user n=ansible | skipping: [172.31.29.226]
+2024-06-04 01:05:46,827 p=6286 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 01:05:47,639 p=6286 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:05:47,831 p=6286 u=ec2-user n=ansible | changed: [172.31.39.19]
+2024-06-04 01:05:47,841 p=6286 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 01:05:48,518 p=6286 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:05:48,726 p=6286 u=ec2-user n=ansible | changed: [172.31.39.19]
+2024-06-04 01:05:48,736 p=6286 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 01:05:49,411 p=6286 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 01:05:49,479 p=6286 u=ec2-user n=ansible | changed: [172.31.39.19]
+2024-06-04 01:05:49,486 p=6286 u=ec2-user n=ansible | TASK [Create directory] ****************************************************************
+2024-06-04 01:05:50,077 p=6286 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"changed": true, "cmd": "mkdir /tmp/os", "delta": "0:00:00.003955", "end": "2024-06-04 01:05:50.022340", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:05:50.018385", "stderr": "mkdir: cannot create directory ‘/tmp/os’: File exists", "stderr_lines": ["mkdir: cannot create directory ‘/tmp/os’: File exists"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:05:50,123 p=6286 u=ec2-user n=ansible | changed: [172.31.39.19]
+2024-06-04 01:05:50,140 p=6286 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:05:50,140 p=6286 u=ec2-user n=ansible | 172.31.29.226              : ok=4    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:05:50,141 p=6286 u=ec2-user n=ansible | 172.31.39.19               : ok=5    changed=4    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:08:04,813 p=6450 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:08:04,823 p=6450 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:08:06,540 p=6450 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:08:06,763 p=6450 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:08:06,777 p=6450 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:08:06,824 p=6450 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"msg": "The conditional check 'ansible_processor_nproc > 2 or ansible_os_family=RedHat' failed. The error was: template error while templating string: expected token 'end of statement block', got '='. String: {% if ansible_processor_nproc > 2 or ansible_os_family=RedHat %} True {% else %} False {% endif %}\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Install nginx\n      ^ here\n"}
+2024-06-04 01:08:06,834 p=6450 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"msg": "The conditional check 'ansible_processor_nproc > 2 or ansible_os_family=RedHat' failed. The error was: template error while templating string: expected token 'end of statement block', got '='. String: {% if ansible_processor_nproc > 2 or ansible_os_family=RedHat %} True {% else %} False {% endif %}\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Install nginx\n      ^ here\n"}
+2024-06-04 01:08:06,837 p=6450 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:08:06,837 p=6450 u=ec2-user n=ansible | 172.31.29.226              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:08:06,838 p=6450 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:09:28,825 p=6519 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:09:28,834 p=6519 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:09:30,667 p=6519 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:09:30,797 p=6519 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:09:30,811 p=6519 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:09:30,837 p=6519 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"msg": "The conditional check 'ansible_processor_nproc > 2 or ansible_os_family = RedHat' failed. The error was: template error while templating string: expected token 'end of statement block', got '='. String: {% if ansible_processor_nproc > 2 or ansible_os_family = RedHat %} True {% else %} False {% endif %}\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Install nginx\n      ^ here\n"}
+2024-06-04 01:09:30,859 p=6519 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"msg": "The conditional check 'ansible_processor_nproc > 2 or ansible_os_family = RedHat' failed. The error was: template error while templating string: expected token 'end of statement block', got '='. String: {% if ansible_processor_nproc > 2 or ansible_os_family = RedHat %} True {% else %} False {% endif %}\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Install nginx\n      ^ here\n"}
+2024-06-04 01:09:30,869 p=6519 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:09:30,870 p=6519 u=ec2-user n=ansible | 172.31.29.226              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:09:30,870 p=6519 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:10:03,112 p=6603 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:10:03,124 p=6603 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:10:04,604 p=6603 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:10:04,839 p=6603 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:10:04,854 p=6603 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:10:04,877 p=6603 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"msg": "The conditional check 'ansible_processor_nproc > 2 or ansible_os_family==RedHat' failed. The error was: error while evaluating conditional (ansible_processor_nproc > 2 or ansible_os_family==RedHat): 'RedHat' is undefined\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Install nginx\n      ^ here\n"}
+2024-06-04 01:10:04,899 p=6603 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"msg": "The conditional check 'ansible_processor_nproc > 2 or ansible_os_family==RedHat' failed. The error was: error while evaluating conditional (ansible_processor_nproc > 2 or ansible_os_family==RedHat): 'RedHat' is undefined\n\nThe error appears to be in '/home/ec2-user/ansible-dev/play1.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Install nginx\n      ^ here\n"}
+2024-06-04 01:10:04,900 p=6603 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:10:04,901 p=6603 u=ec2-user n=ansible | 172.31.29.226              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:10:04,901 p=6603 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:10:34,957 p=6661 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:10:34,974 p=6661 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:10:36,439 p=6661 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:10:36,585 p=6661 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:10:36,614 p=6661 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:10:36,658 p=6661 u=ec2-user n=ansible | skipping: [172.31.29.226]
+2024-06-04 01:10:38,392 p=6661 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"changed": false, "msg": "No package matching 'nginx' found available, installed or updated", "rc": 126, "results": ["No package matching 'nginx' found available, installed or updated"]}
+2024-06-04 01:10:38,403 p=6661 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 01:10:39,063 p=6661 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:10:39,082 p=6661 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 01:10:39,663 p=6661 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:10:39,710 p=6661 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 01:10:40,259 p=6661 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 01:10:40,274 p=6661 u=ec2-user n=ansible | TASK [Create directory] ****************************************************************
+2024-06-04 01:10:40,807 p=6661 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"changed": true, "cmd": "mkdir /tmp/os", "delta": "0:00:00.003505", "end": "2024-06-04 01:10:40.766144", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:10:40.762639", "stderr": "mkdir: cannot create directory ‘/tmp/os’: File exists", "stderr_lines": ["mkdir: cannot create directory ‘/tmp/os’: File exists"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:10:40,810 p=6661 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:10:40,810 p=6661 u=ec2-user n=ansible | 172.31.29.226              : ok=4    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:10:40,810 p=6661 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:20:47,117 p=6796 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:20:47,135 p=6796 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:20:48,817 p=6796 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:20:49,113 p=6796 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:20:49,133 p=6796 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:20:49,157 p=6796 u=ec2-user n=ansible | skipping: [172.31.39.19]
+2024-06-04 01:20:51,971 p=6796 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:20:51,985 p=6796 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:20:52,733 p=6796 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of yum is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the yum (yum3) or dnf (yum4) backend})"]}
+2024-06-04 01:20:52,899 p=6796 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.yum) module: when. Supported parameters include: enable_plugin, autoremove, disable_plugin, install_repoquery, state, update_only, bugfix, disable_gpg_check, exclude, conf_file, download_dir, enablerepo, disablerepo, security, validate_certs, install_weak_deps, releasever, cacheonly, list, sslverify, skip_broken, lock_timeout, use_backend, download_only, update_cache (expire-cache), installroot, allow_downgrade, disable_excludes, name (pkg)."}
+2024-06-04 01:20:52,902 p=6796 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:20:52,902 p=6796 u=ec2-user n=ansible | 172.31.29.226              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:20:52,902 p=6796 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:25:11,290 p=6966 u=ec2-user n=ansible | playbook: play1.yml
+2024-06-04 01:25:31,102 p=6996 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:25:31,112 p=6996 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:25:32,682 p=6996 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:25:33,107 p=6996 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:25:33,122 p=6996 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:25:33,143 p=6996 u=ec2-user n=ansible | skipping: [172.31.39.19]
+2024-06-04 01:25:35,635 p=6996 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:25:35,647 p=6996 u=ec2-user n=ansible | TASK [Install nginx 2] *****************************************************************
+2024-06-04 01:25:36,367 p=6996 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of yum is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the yum (yum3) or dnf (yum4) backend})"]}
+2024-06-04 01:25:36,614 p=6996 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.yum) module: when. Supported parameters include: download_dir, disablerepo, lock_timeout, use_backend, allow_downgrade, install_repoquery, install_weak_deps, list, autoremove, security, installroot, releasever, name (pkg), download_only, state, disable_excludes, cacheonly, update_only, bugfix, update_cache (expire-cache), exclude, conf_file, enable_plugin, disable_plugin, validate_certs, skip_broken, sslverify, enablerepo, disable_gpg_check."}
+2024-06-04 01:25:36,616 p=6996 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:25:36,617 p=6996 u=ec2-user n=ansible | 172.31.29.226              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-04 01:25:36,617 p=6996 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:28:20,973 p=7163 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:28:20,995 p=7163 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:28:22,776 p=7163 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:28:23,192 p=7163 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:28:23,207 p=7163 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:28:23,252 p=7163 u=ec2-user n=ansible | skipping: [172.31.39.19]
+2024-06-04 01:28:25,805 p=7163 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:28:25,814 p=7163 u=ec2-user n=ansible | TASK [Install nginx on redhat family] **************************************************
+2024-06-04 01:28:25,864 p=7163 u=ec2-user n=ansible | skipping: [172.31.29.226]
+2024-06-04 01:28:27,621 p=7163 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"changed": false, "msg": "No package matching 'nginx' found available, installed or updated", "rc": 126, "results": ["No package matching 'nginx' found available, installed or updated"]}
+2024-06-04 01:28:27,630 p=7163 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 01:28:28,274 p=7163 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:28:28,283 p=7163 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 01:28:28,961 p=7163 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:28:28,973 p=7163 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 01:28:29,672 p=7163 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 01:28:29,682 p=7163 u=ec2-user n=ansible | TASK [Create directory] ****************************************************************
+2024-06-04 01:28:30,314 p=7163 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"changed": true, "cmd": "mkdir /tmp/os", "delta": "0:00:00.003792", "end": "2024-06-04 01:28:30.267274", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:28:30.263482", "stderr": "mkdir: cannot create directory ‘/tmp/os’: File exists", "stderr_lines": ["mkdir: cannot create directory ‘/tmp/os’: File exists"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:28:30,320 p=7163 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:28:30,320 p=7163 u=ec2-user n=ansible | 172.31.29.226              : ok=5    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:28:30,321 p=7163 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:29:42,514 p=7321 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:29:42,525 p=7321 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:29:44,124 p=7321 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:29:44,290 p=7321 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:29:44,318 p=7321 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:29:44,366 p=7321 u=ec2-user n=ansible | skipping: [172.31.39.19]
+2024-06-04 01:29:47,164 p=7321 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:29:47,172 p=7321 u=ec2-user n=ansible | TASK [Install nginx on redhat family] **************************************************
+2024-06-04 01:29:47,213 p=7321 u=ec2-user n=ansible | skipping: [172.31.29.226]
+2024-06-04 01:29:49,001 p=7321 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"changed": false, "msg": "No package matching 'nginx' found available, installed or updated", "rc": 126, "results": ["No package matching 'nginx' found available, installed or updated"]}
+2024-06-04 01:29:49,011 p=7321 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 01:29:49,664 p=7321 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:29:49,693 p=7321 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 01:29:50,261 p=7321 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:29:50,273 p=7321 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 01:29:50,840 p=7321 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 01:29:50,858 p=7321 u=ec2-user n=ansible | TASK [Create directory] ****************************************************************
+2024-06-04 01:29:51,393 p=7321 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"changed": true, "cmd": "mkdir /tmp/os", "delta": "0:00:00.003449", "end": "2024-06-04 01:29:51.355228", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:29:51.351779", "stderr": "mkdir: cannot create directory ‘/tmp/os’: File exists", "stderr_lines": ["mkdir: cannot create directory ‘/tmp/os’: File exists"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:29:51,395 p=7321 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:29:51,395 p=7321 u=ec2-user n=ansible | 172.31.29.226              : ok=5    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:29:51,395 p=7321 u=ec2-user n=ansible | 172.31.39.19               : ok=1    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:35:00,443 p=7490 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:35:00,460 p=7490 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:35:02,296 p=7490 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:35:02,939 p=7490 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:35:02,953 p=7490 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:35:02,976 p=7490 u=ec2-user n=ansible | skipping: [172.31.39.19]
+2024-06-04 01:35:05,589 p=7490 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:35:05,602 p=7490 u=ec2-user n=ansible | TASK [Install httpd] *******************************************************************
+2024-06-04 01:35:05,651 p=7490 u=ec2-user n=ansible | skipping: [172.31.29.226]
+2024-06-04 01:35:07,226 p=7490 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:35:07,237 p=7490 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 01:35:07,999 p=7490 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:35:08,065 p=7490 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:35:08,073 p=7490 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 01:35:08,679 p=7490 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:35:08,722 p=7490 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:35:08,729 p=7490 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 01:35:09,295 p=7490 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 01:35:09,334 p=7490 u=ec2-user n=ansible | changed: [172.31.39.19]
+2024-06-04 01:35:09,343 p=7490 u=ec2-user n=ansible | TASK [Create directory] ****************************************************************
+2024-06-04 01:35:09,960 p=7490 u=ec2-user n=ansible | fatal: [172.31.29.226]: FAILED! => {"changed": true, "cmd": "mkdir /tmp/os", "delta": "0:00:00.003544", "end": "2024-06-04 01:35:09.918792", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:35:09.915248", "stderr": "mkdir: cannot create directory ‘/tmp/os’: File exists", "stderr_lines": ["mkdir: cannot create directory ‘/tmp/os’: File exists"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:35:09,999 p=7490 u=ec2-user n=ansible | fatal: [172.31.39.19]: FAILED! => {"changed": true, "cmd": "mkdir /tmp/os", "delta": "0:00:00.004252", "end": "2024-06-04 01:35:09.945969", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:35:09.941717", "stderr": "mkdir: cannot create directory ‘/tmp/os’: File exists", "stderr_lines": ["mkdir: cannot create directory ‘/tmp/os’: File exists"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:35:10,000 p=7490 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:35:10,006 p=7490 u=ec2-user n=ansible | 172.31.29.226              : ok=5    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:35:10,006 p=7490 u=ec2-user n=ansible | 172.31.39.19               : ok=5    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:36:15,478 p=7686 u=ec2-user n=ansible | PLAY [all] *****************************************************************************
+2024-06-04 01:36:15,493 p=7686 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************
+2024-06-04 01:36:17,163 p=7686 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:36:17,468 p=7686 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:36:17,480 p=7686 u=ec2-user n=ansible | TASK [Install nginx] *******************************************************************
+2024-06-04 01:36:17,517 p=7686 u=ec2-user n=ansible | skipping: [172.31.39.19]
+2024-06-04 01:36:24,860 p=7686 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:36:24,868 p=7686 u=ec2-user n=ansible | TASK [Install httpd] *******************************************************************
+2024-06-04 01:36:24,914 p=7686 u=ec2-user n=ansible | skipping: [172.31.29.226]
+2024-06-04 01:36:26,526 p=7686 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:36:26,544 p=7686 u=ec2-user n=ansible | TASK [Create user Nichole] *************************************************************
+2024-06-04 01:36:27,146 p=7686 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:36:27,329 p=7686 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:36:27,337 p=7686 u=ec2-user n=ansible | TASK [Create group cloudteam] **********************************************************
+2024-06-04 01:36:27,901 p=7686 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:36:27,996 p=7686 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:36:28,003 p=7686 u=ec2-user n=ansible | TASK [Create Index File] ***************************************************************
+2024-06-04 01:36:28,613 p=7686 u=ec2-user n=ansible | changed: [172.31.29.226]
+2024-06-04 01:36:28,672 p=7686 u=ec2-user n=ansible | changed: [172.31.39.19]
+2024-06-04 01:36:28,682 p=7686 u=ec2-user n=ansible | TASK [Create Directory] ****************************************************************
+2024-06-04 01:36:29,095 p=7686 u=ec2-user n=ansible | ok: [172.31.29.226]
+2024-06-04 01:36:29,187 p=7686 u=ec2-user n=ansible | ok: [172.31.39.19]
+2024-06-04 01:36:29,239 p=7686 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************
+2024-06-04 01:36:29,240 p=7686 u=ec2-user n=ansible | 172.31.29.226              : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-06-04 01:36:29,240 p=7686 u=ec2-user n=ansible | 172.31.39.19               : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

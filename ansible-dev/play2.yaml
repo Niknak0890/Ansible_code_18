@@ -1,0 +1,43 @@
+---
+- hosts: ws
+  become: 1 #(1 or yes or true)
+  gather_facts: 1 
+  ignore_errors: 1 #put for all tasks
+  vars:
+      user_name: Nichole2024
+      group: terraform
+  vars_files:
+     - variables.yml #another way to declare a variable using a file vs declared in playbook
+  tasks:
+    - name: check server uptime
+      command: "{{my_command}}"
+      #ignore_errors: 1 - put here if wanting a specific task to be ignored 
+      register: uptime_command_my_command
+    - name: list directory
+      shell: ls
+    - name: check kernel version
+      command: uname -r 
+      register: kernel_output #another way to declare variable (can have any variable name)
+                              #register the output of a command
+    - name: create user
+      user:
+        name: "{{user_name}}"
+    - name: create group
+      group: 
+        name: "{{group}}"
+    - name: Read data
+      debug: 
+        msg: "Hey y'all from da players book"
+    - name: Read data
+      debug: # use to check/print specific variables
+        var: user_name
+    - name: Kernel output
+      debug:
+        var: kernel_output.stdout #.stdout calls out the specific line from this output
+                                  #w/o - the entire output for this variable will display
+    - name: Uptime command displayed
+      debug:
+        var: uptime_command_my_command.stdout[:19] #[:19]calls out specific values from this line 
+                                                   ##from spaces 0-19 
+  
+  

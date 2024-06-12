@@ -1,0 +1,19 @@
+---
+- hosts: ws
+  become: 1 #(1 or yes or true)
+  gather_facts: 1 
+  ignore_errors: 1 #put for all tasks
+  
+  tasks:
+    - name: Package Install
+      yum: 
+        name: "{{item}}" # or ["wget", "finger", etc]; can enter as a list instead of loop
+        state: present
+      with_items: #(or use loop)
+        - wget 
+        - finger 
+        - docker 
+        - ntp
+        - curl
+        #with_items is used with the items variable to consolidate tasks
+        ##this is called a loop

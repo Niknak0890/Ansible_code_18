@@ -1,0 +1,56 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  ignore_errors: yes
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+      tags:
+        - apt_get # use tags to id each task to be able to run specific tasks
+                  ## use --tag apt_get in the cli to run this specific tasks
+      when:  ansible_os_family=="Debian"
+    - name: Install httpd
+      package:
+        name: httpd
+        state: present
+      when: ansible_os_family=="RedHat"
+    - name: Start http Daemon
+      service: 
+        name: httpd
+        state: start
+        enable: yes 
+    - name: Create user Nichole
+      user: 
+        name: Nichole
+        comment: Nichole Avery
+        shell: /bin/bash
+    - name: Create group cloudteam
+      group: 
+        name: cloudteam
+        state: present
+    - name: Create Index File
+      file:
+        path: /var/www/html/index.html
+        state: touch
+      register: file_output #register the variable
+      tags: 
+        - touch
+    - name: Read data
+      debug:
+        var: file_output.diff.before.path #prints the output
+    #- #name: Create directory
+      #shell: mkdir /tmp/os
+      ## or command: mkdir /temp/os or raw: mkdir /temp/os
+    - name: Create Directory
+      file: 
+        path: /tmp/os
+        state: directory
+    - name: Copy content to index
+      copy: 
+        dest: /var/www/html/index.html #or file_output.diff.before.path
+        content: "<h1>This is created using ansible :)</h1>"
